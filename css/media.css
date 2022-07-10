@@ -1,0 +1,91 @@
+
+@media (max-width:1140px){
+    .card{
+        width: calc(50% - 15px);
+    }
+    .footer{
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .footer-row{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col{
+        margin-bottom: 19px;
+    }
+    .footer-col:first-child{
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:860px){
+    .project-header{
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .project-img{
+        margin-bottom: 20px;
+    }
+    .project-description{
+        margin-bottom: 50px;
+    }
+    .project-button-back{
+        margin: 0px 15px 60px;
+        padding: 20px 19,67px;
+    }
+}
+
+@media (max-width:760px){
+    .header-name{
+        font-size: 32px;
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+    .header-subtitle{
+        font-size: 14px;
+    }
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .card{
+        max-width: 530px;
+        width: 100%;
+    }
+    .portfolio-cadr-wrapper{
+        justify-content: center;
+    }
+    .card-url{
+        padding: 15px;
+    }
+    .card:nth-last-child(2){
+        margin-bottom: 30px;
+    }
+    .card-img{
+        margin-bottom: 10px;
+    }
+    .card.title{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .card p{
+        font-size: 14px;
+    }
+    .footer-copyright-name{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .footer-copyright p{
+        font-size: 14px;
+    }
+    .footer-social p{
+        font-size: 14px;
+    }
+    .footer-contact p{
+        font-size: 14px;
+        margin: 19px 0 15px 0px;
+    }
+}
