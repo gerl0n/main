@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>ActiveBox</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>ActiveBox</title>
 </head>
 
 <body>
 <!-- sprite -->
 <svg style="display:none;">
+    <symbol id="heart">
+        <path d="m10 15.417-.25-.229q-1.979-1.792-3.271-3.042-1.291-1.25-2.021-2.167-.729-.917-1-1.635-.27-.719-.27-1.448 0-1.334.947-2.281.948-.948 2.303-.948 1.02 0 1.947.573.927.572 1.615 1.677.708-1.105 1.625-1.677.917-.573 1.958-.573 1.334 0 2.282.948.947.947.947 2.281 0 .729-.26 1.427-.26.698-.99 1.604-.729.906-2.02 2.177-1.292 1.271-3.334 3.125Z"/>
+    </symbol>
     <symbol id="facebook">
        <path d="M8.0,5.828 L5.275,5.828 L5.275,3.960 C5.275,3.258 5.720,3.94 6.33,3.94 C6.345,3.94 7.955,3.94 7.955,3.94 L7.955,0.10 L5.308,0.0 C2.368,0.0 1.699,2.300 1.699,3.772 L1.699,5.828 L0.0,5.828 L0.0,9.6 L1.699,9.6 C1.699,13.85 1.699,18.0 1.699,18.0 L5.275,18.0 C5.275,18.0 5.275,13.36 5.275,9.6 L7.687,9.6 L8.0,5.828 Z"/>
     </symbol>
@@ -27,26 +34,30 @@
 </svg>
 
 <!-- header -->
-<header class="header none">
+<header class="header JSheader">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">
+            <a href="#" class="header__logo">
                 <img src="./img/activebox-logo.png" alt="activebox-logo">
-            </div>
+            </a>
 
-            <nav class="nav">
-                <a href="#" class="nav_link">Features</a>
-                <a href="#" class="nav_link">Works</a>
-                <a href="#" class="nav_link">Our Team</a>
-                <a href="#" class="nav_link">Testimonials</a>
-                <a href="#" class="nav_link">Download</a>
+            <nav class="nav jsNav">
+                <a href="#feature" class="nav_link" data-scroll="#feature">Features</a>
+                <a href="#work" class="nav_link" data-scroll="#work">Works</a>
+                <a href="#team" class="nav_link" data-scroll="#team">Our Team</a>
+                <a href="#review" class="nav_link" data-scroll="#review">Testimonials</a>
+                <a href="#download" class="nav_link" data-scroll="#download">Download</a>
             </nav>
+
+            <button class="burger jsToggle">
+                <span class="butger_item"></span>
+            </button>
         </div>
     </div>
 </header>
 <!-- /header -->
 <!-- intro -->
-<div class="intro none">
+<div class="intro JSintro">
     <div class="container">
         <div class="intro_inner">
             <h1 class="intro_title">Your Favorite One Page Multi Purpose Template</h1>
@@ -56,9 +67,8 @@
     </div>
 </div>
 <!-- /intro -->
-<!-- 09 45 -->
-<div class="container none">
-    <div class="feature">
+<div class="container">
+    <div class="feature" id="feature">
         <div class="feature_item">
             <img class="feature_ico" src="./img/feature/feature-1.png" alt="Easily Customised">
             <h4 class="feature_title">Easily Customised</h4>
@@ -93,8 +103,7 @@
     <!-- /feature -->
 </div>
 <!-- /container -->
-<!-- 10 45 -->
-<div class="work none">
+<div class="work" id="work">
     <div class="work_item">
         <img class="work_img" src="./img/work/work_1.jpg" alt="">
         <div class="work_hover">
@@ -153,7 +162,7 @@
     </div>
 </div>
 <!-- /work -->
-<div class="team none">
+<div class="team" id="team">
     <div class="container">
         <div class="team_inner">
             <div class="team_item">
@@ -252,7 +261,7 @@
     </div>
 </div>
 <!-- /team -->
-<div class="review none">
+<div class="review" id="review">
     <div class="container">
         <div class="review_item">
             <div class="review_img">
@@ -268,7 +277,7 @@
     </div>
 </div>
 <!-- review -->
-<div class="download">
+<div class="download" id="download">
     <div class="container">
         <div class="download_item">
             <div class="download_title">
@@ -285,44 +294,58 @@
 </div>
 <!-- download -->
 <footer class="footer">
-    <div class="footer_inner">
-        <div class="footer_upper">
-                <div class="upper_address item">
-                    <div class="upper_title">
-                        Location
-                    </div>
-                    <address class="upper_subtitle">
-                        3481 Melrose Place
-                        Beverly Hills, CA 90210
-                    </address>
-                </div>
-                <div class="upper_share item">
-                    <div class="upper_title">
-                        Share with Love
-                    </div>
-                    <div class="upper_subtitle">
-                        3481 Melrose Place
-                        Beverly Hills, CA 90210
-                    </div>
-                </div>
-                <div class="upper_about item">
-                    <div class="upper_title">
-                        About ActiveBox
-                    </div>
-                    <div class="upper_subtitle">
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
-                    </div>
-                </div>
-        </div>
-
-        <div class="footer_lower">
-            <div class="lower_Copyright">
-                Copyright © 2015 ActiveBox. All Rights Reserved
-                Made with <div class="lower_Copyright_autor">by Kamal Chaneman</div>
+    <div class="container">
+        <div class="footer_inner">
+            <div class="footer_item">
+                <h4 class="footer_item_h4">Location</h4>
+                <address class="footer_address">
+                    <div class="footer_text">3481 Melrose Place</div>
+                    <div class="footer_text">Beverly Hills, CA 90210</div>
+                </address>
             </div>
+
+            <div class="footer_item">
+                <h4 class="footer_item_h4">Share with Love</h4>
+                <div class="footer_social">
+                    <a href="#" class="footer_social_item" target="_blank">
+                        <svg class="footer_social_ico facebook">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer_social_item" target="_blank">
+                        <svg class="footer_social_ico twit">
+                            <use xlink:href="#twit"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer_social_item" target="_blank">
+                        <svg class="footer_social_ico ink">
+                            <use xlink:href="#ink"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_item ">
+                <h4 class="footer_item_h4">About ActiveBox</h4>
+                <div class="footer_text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</div>
+            </div>
+
         </div>
     </div>
+    <!-- /container -->
+    <div class="footer_Copyright">
+        <div>Copyright © 2015 ActiveBox. All Rights Reserved</div>
+        <div class="footer_copyright_inner">
+            <div>Made with</div>
+            <svg class="footer_social_ico heart">
+                <use xlink:href="#heart"></use>
+            </svg>
+            <span>by Kamal Chaneman</span>
+        </div>
+    </div>
+
 </footer>
 
+<script src="./js/app.js"></script>
 </body>
 </html>

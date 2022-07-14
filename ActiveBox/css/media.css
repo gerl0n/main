@@ -1,0 +1,29 @@
+
+
+@media (max-width:991px){
+
+    .nav{
+        display: none;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        text-align: right;
+        top: 100%;
+        width: 100%;
+        background-color: #31344e;
+    }
+
+    .nav.show{
+        display: flex;
+    }
+
+    .nav_link{
+        padding: 20px 15px;
+    }
+
+
+    .burger{
+        display: block;
+    }
+    
+}
